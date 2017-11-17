@@ -3,11 +3,19 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: After identifying the Naked Twins in the corresponding unit, Constraint Propagation is applied such that all the other boxes in the unit (other than the Twins) cannot have the possible values of the Twins.
+
+In other words, all the other boxes in the corresponding unit of the Twins are constrained such that the set of their possible values cannot contain the possible values of the twins.
+
+The constraint is valid because if 2 boxes within the same unit have the same possible values of length 2 eg: 4 or 5. Then only the following combinations are valid. First twin : 4 Second Twin : 5 or vice versa. If any other box within the same unit takes on value 4 or 5, then there would no longer be any valid solution because at least one of the twin would not have any solution.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: The constraint that no boxes in the diagonal can contain the same digits is applied to solve this problem.
+
+In order to introduce this constraint, 2 new units consisting of the 2 diagonals in the sudoku board were introduced. These units were taken into account when performing the Only Choice algorithm.
+
+Constraint propagation is effectively used here to reduce the set of possible solutions by setting a constraint on the diagonals.
 
 ### Install
 
